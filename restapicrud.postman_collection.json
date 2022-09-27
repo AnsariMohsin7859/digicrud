@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "a83957cd-0e9a-4444-ba9e-7717a034be7e",
+		"name": "restapicrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20469829"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\" : \"amit\",\r\n\"age\" : 15 ,\r\n\"email\" : \"amit@mail.com\",\r\n\"password\" : \"123456\",\r\n\"address\" : \"india is greate\",\r\n\"role\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3080/v1/user/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3080/v1/user/getUserById/63308c3e9b5ae9f1f14271be",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"getUserById",
+						"63308c3e9b5ae9f1f14271be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3080/v1/user/getAllUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"getAllUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\" : \"user\",\r\n\"age\" : 13 , \r\n\"address\" : \"ujjain is greate\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3080/v1/user/updateUser/633147733f73771076aeb9cc",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"updateUser",
+						"633147733f73771076aeb9cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3080/v1/user/deleteUser/6331477e3f73771076aeb9cf",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"deleteUser",
+						"6331477e3f73771076aeb9cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"mohsin@mail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3080/v1/user/loginUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"loginUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signout User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzMxNDc1ZTNmNzM3NzEwNzZhZWI5YzkiLCJyb2xlIjoidXNlciIsImlhdCI6MTY2NDE3ODczMCwiZXhwIjoxNjY0MjY1MTMwfQ.b5b8ZvEfDVhyIn-w_EMiUhN6bUeNovnJ4Uhm-tbh5wk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3080/v1/user/signoutUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"v1",
+						"user",
+						"signoutUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
